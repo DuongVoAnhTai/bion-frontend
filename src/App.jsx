@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import AppShell from "./layouts/AppShell";
-import HomePage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
 import SpeciesExplorePage from "./pages/SpeciesExplorePage";
 import SpeciesDetailPage from "./pages/SpeciesDetailPage";
 import HotspotExplorePage from "./pages/HotspotExplorePage";
 import HotspotDetailPage from "./pages/HotspotDetailPage";
 import ContributePage from "./pages/ContributePage";
 import PhotographerProfilePage from "./pages/PhotographerProfilePage";
+import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
   return (
-    <AppShell>
+    <MainLayout>
       <Routes>
         <Route path="/" element={<HomePage />} />
 
@@ -31,7 +31,7 @@ const App = () => {
           element={<PhotographerProfilePage />}
         />
       </Routes>
-    </AppShell>
+    </MainLayout>
   );
 };
 
