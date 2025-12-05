@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #edf7f4;
+  --color-primary-100: #d1ebe1;
+  --color-primary-200: #a3d7c3;
+  --color-primary-300: #71c3a2;
+  --color-primary-400: #45af88;
+  --color-primary-500: #1f946d; /* Màu gốc */
+  --color-primary-600: #167557;
+  --color-primary-700: #115b45;
+  --color-primary-800: #0b4031;
+  --color-primary-900: #06251d;
+
+  --color-accent: #2f8fcb;
+
+  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.12);
+  --radius-xl: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+      sans-serif;
+  }
+
+  /* Scrollbar tùy chỉnh */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.7);
+    border-radius: 999px;
+  }
+}
