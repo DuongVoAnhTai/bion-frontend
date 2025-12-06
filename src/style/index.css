@@ -2,12 +2,15 @@
 
 @theme {
   /* Background colors */
-  --color-white-background: #eeeeee;
+  --color-white-background1: #eeeeee;
+  --color-white-background2: #f7f7f7;
 
   /* Selection colors */
   --color-black-text: #151515;
   --color-green-logo: #2ba78c;
   --color-gray: #a1a1a1;
+  --color-gray-light: #c6c6c6;
+  --color-gray-dark: #5b5b5b;
 
   --text-nav: 20px;
   --text-logo: 30px;

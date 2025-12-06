@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
-import { Button } from "./ui/Button";
 import { cn } from "../lib/utils";
+import { Button } from "./ui/Button";
 
 const NavItem = ({ to, children }) => (
   <NavLink
@@ -17,13 +17,13 @@ const NavItem = ({ to, children }) => (
   </NavLink>
 );
 
-export function Header() {
+export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white-background h-[80px] flex items-center justify-center">
-      <div className="w-full max-w-[1300px] flex items-center justify-between px-4 md:px-0">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white-background1 h-20 flex items-center justify-center px-4 md:px-[156px]">
+      <div className="w-full flex items-center justify-between">
         <Link to="/" className="flex items-center gap-[5px]">
           <img src={logo} alt="BiON logo" className="h-10 w-auto" />
-          <span className="font-poppins text-[30px] font-bold text-green-logo leading-normal">
+          <span className="font-poppins text-logo font-bold text-green-logo">
             BiON
           </span>
         </Link>
@@ -33,7 +33,7 @@ export function Header() {
           <NavItem to="/community">Community</NavItem>
           <NavItem to="/about">About</NavItem>
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           <Button variant="outline" size="lg">
             Sign In
           </Button>
