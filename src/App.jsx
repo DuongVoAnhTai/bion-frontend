@@ -10,8 +10,8 @@ import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
   return (
-    <MainLayout>
-      <Routes>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
 
         {/* Species */}
@@ -30,8 +30,8 @@ const App = () => {
           path="/photographers/:id"
           element={<PhotographerProfilePage />}
         />
-      </Routes>
-    </MainLayout>
+      </Route>
+    </Routes>
   );
 };
 
