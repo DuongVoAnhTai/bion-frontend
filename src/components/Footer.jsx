@@ -14,10 +14,13 @@ const FooterLink = ({ to, children }) => (
 export default function Footer() {
   return (
     <footer className="bg-white-background2">
-      <div className=" mx-auto px-4 md:px-[156px] pt-16 pb-10">
+      <div className=" mx-auto px-4 md:px-8 xl:px-[156px] pt-10 md:pt-16 pb-10">
         <div className="flex flex-col md:flex-row justify-between gap-10">
-          <div className="w-full md:w-1/3">
-            <Link to="/" className="flex items-center gap-2 mb-4">
+          <div className="w-full md:w-1/3 text-center md:text-left">
+            <Link
+              to="/"
+              className="flex items-center justify-center md:justify-start gap-2 mb-4"
+            >
               <img src={logo} alt="BiON logo" className="h-12 w-auto" />
               <span className="font-poppins text-2xl font-bold text-green-logo">
                 BiON
@@ -28,7 +31,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="w-full md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
               <h3 className="font-bold text-lg text-black-text mb-4">
                 Explore
@@ -76,7 +79,7 @@ export default function Footer() {
                 <li className="text-gray-dark">Book tours: +84 979 022 360</li>
                 <li className="text-gray-dark">Email: info@wanee.vn</li>
               </ul>
-              <div className="flex space-x-4 mt-4">
+              <div className="flex space-x-4 mt-4 justify-center md:justify-start">
                 <a href="#" className="text-gray-dark hover:text-green-logo">
                   <Facebook className="text-black-text" />
                 </a>

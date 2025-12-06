@@ -1,7 +1,13 @@
 import HeroSection from "../components/home/HeroSection";
+import WhatIsBionSection from "../components/home/WhatIsBiONSection";
 
 const HomePage = () => {
-  return <HeroSection />;
+  return (
+    <div>
+      <HeroSection />
+      <WhatIsBionSection />
+    </div>
+  );
 };
 
 export default HomePage;
