@@ -1,13 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import { cn } from "../../lib/utils";
 
 export default function CoreModuleCard({
   title,
   description,
   image,
+  link,
   className,
   isActive,
   onMobileClick,
 }) {
+  const navigate = useNavigate();
+
   const handleClick = () => {
     const isDesktop = window.matchMedia(
       "(hover: hover) and (pointer: fine)"
@@ -16,6 +20,11 @@ export default function CoreModuleCard({
     if (isDesktop) return;
 
     onMobileClick();
+  };
+
+  const handleButtonViewMore = (e) => {
+    e.stopPropagation();
+    navigate(link);
   };
 
   return (
@@ -70,7 +79,10 @@ export default function CoreModuleCard({
             </p>
 
             {/* View More Button */}
-            <button className="mt-6 rounded-full border border-gray bg-white-background2/10 px-6 py-2 text-sm font-medium text-white-background2 backdrop-blur-md transition-colors hover:bg-white-background2/20 cursor-pointer">
+            <button
+              onClick={handleButtonViewMore}
+              className="mt-6 rounded-full border border-gray bg-white-background2/10 px-6 py-2 text-sm font-medium text-white-background2 backdrop-blur-md transition-colors hover:bg-white-background2/20 cursor-pointer"
+            >
               View more
             </button>
           </div>

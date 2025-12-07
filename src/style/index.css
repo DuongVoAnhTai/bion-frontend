@@ -14,7 +14,10 @@
   --color-black: #000000;
   --color-white: #ffffff;
   --color-gray-border: #dedede;
+  --color-green-soft: #2ba78c1a;
 
   --text-nav: 20px;
   --text-logo: 30px;
+
+  --shadow-species: 0 8px 24px #00000033;
 }
