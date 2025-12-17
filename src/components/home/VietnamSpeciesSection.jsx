@@ -44,7 +44,7 @@ export default function VietnamSpeciesSection() {
   return (
     <section className="bg-white-background2 py-20">
       {/* Container */}
-      <div className="container mx-auto px-4 md:px-[156px]">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
         {/* --- HEADER --- */}
         <div className="mb-12 flex flex-col items-center text-center">
           {/* Title */}
@@ -63,15 +63,27 @@ export default function VietnamSpeciesSection() {
 
         {/* --- GRID CARDS --- */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {speciesList.map((item, index) => (
-            <SpeciesCard
-              key={index}
-              id={item.id}
-              commonName={item.commonName}
-              scientificName={item.scientificName}
-              image={item.image}
-            />
-          ))}
+          {speciesList.map((item, index) => {
+            let visibilityClass = "";
+
+            if (index === 3) {
+              visibilityClass = "hidden md:flex";
+            } else if (index > 3) {
+              // Item 5, 6: display only on desktop
+              visibilityClass = "hidden lg:flex";
+            }
+
+            return (
+              <SpeciesCard
+                key={index}
+                id={item.id}
+                commonName={item.commonName}
+                scientificName={item.scientificName}
+                image={item.image}
+                className={visibilityClass}
+              />
+            );
+          })}
         </div>
 
         {/* --- BUTTON VIEW ALL --- */}

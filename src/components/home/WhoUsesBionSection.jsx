@@ -43,7 +43,7 @@ const userGroups = [
 export default function WhoUsesBionSection() {
   return (
     <section className="bg-white-background2 py-20">
-      <div className="container mx-auto px-4 md:px-[156px]">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
         {/* --- HEADER --- */}
         <div className="mb-12 flex flex-col items-center text-center">
           <h2 className="mb-4 font-space-grotesk text-4xl font-bold text-black-text md:text-5xl">

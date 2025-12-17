@@ -54,7 +54,7 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute top-20 left-0 right-0 bg-white-background1 border-t border-gray-border p-4 shadow-lg md:hidden flex flex-col gap-4 items-center animate-in slide-in-from-top-5">
+        <div className="absolute top-20 left-0 right-0 bg-white-background1 border-t border-gray-border p-4 shadow-lg md:hidden flex flex-col gap-4 items-start animate-in slide-in-from-top-5">
           <NavItem to="/species" onClick={() => setIsMenuOpen(false)}>
             Species
           </NavItem>

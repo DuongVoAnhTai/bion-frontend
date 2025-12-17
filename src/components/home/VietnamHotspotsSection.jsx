@@ -43,7 +43,7 @@ const hotspots = [
 export default function VietnamHotspotsSection() {
   return (
     <section className="bg-white-background2 py-20">
-      <div className="container mx-auto px-4 md:px-[156px]">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
         {/* --- HEADER --- */}
         <div className="mb-12 flex flex-col items-center text-center">
           <h2 className="mb-6 font-space-grotesk text-4xl font-bold text-black-text md:text-5xl">
@@ -58,15 +58,27 @@ export default function VietnamHotspotsSection() {
 
         {/* --- GRID --- */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {hotspots.map((item, index) => (
-            <HotspotCard
-              key={index}
-              id={item.id}
-              name={item.name}
-              location={item.location}
-              image={item.image}
-            />
-          ))}
+          {hotspots.map((item, index) => {
+            let visibilityClass = "";
+
+            if (index === 3) {
+              visibilityClass = "hidden md:flex";
+            } else if (index > 3) {
+              // Item 5, 6: display only on desktop
+              visibilityClass = "hidden lg:flex";
+            }
+
+            return (
+              <HotspotCard
+                key={index}
+                id={item.id}
+                name={item.name}
+                location={item.location}
+                image={item.image}
+                className={visibilityClass}
+              />
+            );
+          })}
         </div>
 
         {/* --- BUTTON --- */}

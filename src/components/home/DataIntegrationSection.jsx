@@ -29,7 +29,7 @@ const partners = [
 export default function DataIntegrationSection() {
   return (
     <section className="bg-white-background2 py-16">
-      <div className="container mx-auto px-4 md:px-[156px]">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
         {/* --- HEADER --- */}
         <div className="mb-10 text-center">
           {/* Title: */}
@@ -39,7 +39,7 @@ export default function DataIntegrationSection() {
         </div>
 
         {/* --- LOGO STRIP --- */}
-        <div className="flex flex-wrap items-center justify-center gap-8 border-y border-gray-light py-10 md:justify-between">
+        <div className="flex flex-wrap items-center justify-center gap-8 border-y border-gray-light py-10 xl:justify-between">
           {partners.map((partner) => (
             <div
               key={partner.id}
