@@ -1,7 +1,11 @@
+import JoinMissionSection from "../components/JoinMissionSection";
+import MainSection from "../components/species/speciesExplorer/MainSection";
+
 const SpeciesExplorePage = () => {
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-6">
-      SpeciesExplore page
+    <div className="lex flex-col">
+      <MainSection />
+      <JoinMissionSection />
     </div>
   );
 };

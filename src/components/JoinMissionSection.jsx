@@ -1,5 +1,5 @@
-import { Button } from "../ui/Button";
-import banner2 from "../../assets/images/banner2.png";
+import { Button } from "./ui/Button";
+import banner2 from "../assets/images/banner2.png";
 import { Link } from "react-router-dom";
 
 export default function JoinMissionSection() {
