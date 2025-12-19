@@ -3,7 +3,7 @@ import MainSection from "../components/species/speciesExplorer/MainSection";
 
 const SpeciesExplorePage = () => {
   return (
-    <div className="lex flex-col">
+    <div className="flex flex-col">
       <MainSection />
       <JoinMissionSection />
     </div>

@@ -3,8 +3,11 @@ import { LayoutGrid, List } from "lucide-react";
 import { cn } from "../../../lib/utils";
 import FilterSidebar from "./FilterSidebar";
 import SpeciesCardExplorer from "../../ui/SpeciesExplorerCard";
+import { taxonomyData } from "./data/taxonomy";
+import TaxonomyItem from "./TaxonomyItem";
 
 const mockData = Array(8).fill({
+  id: 1,
   name: "Animallia",
   count: "26.314.614",
   image: "/src/assets/images/species-explorer2.png",
@@ -14,15 +17,17 @@ export default function MainSection() {
   const [viewMode, setViewMode] = useState("grid"); // 'grid' hoặc 'list'
 
   return (
-    <div className="min-h-screen bg-white py-10">
-      <div className="container mx-auto px-4 md:px-[156px]">
-        <div className="flex flex-col md:flex-row gap-10">
+    <div className="min-h-screen bg-white-background2 py-10">
+      <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
+        <div className="flex flex-col lg:flex-row gap-10">
           {/* --- LEFT SIDEBAR --- */}
-          <FilterSidebar />
+          <aside className="w-full lg:w-64 shrink-0">
+            <FilterSidebar />
+          </aside>
 
           {/* --- DIVIDER (Đường kẻ dọc) --- */}
           {/* Chỉ hiện trên Desktop */}
-          <div className="hidden md:block w-px bg-gray-light self-stretch opacity-50"></div>
+          <div className="hidden lg:block w-px bg-gray-light self-stretch opacity-50"></div>
 
           {/* --- RIGHT CONTENT --- */}
           <div className="flex-1">
@@ -56,16 +61,25 @@ export default function MainSection() {
             </div>
 
             {/* Grid Display */}
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              {mockData.map((item, index) => (
-                <SpeciesCardExplorer
-                  key={index}
-                  name={item.name}
-                  count={item.count}
-                  image={item.image}
-                />
-              ))}
-            </div>
+            {viewMode == "grid" ? (
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                {mockData.map((item, index) => (
+                  <SpeciesCardExplorer
+                    key={index}
+                    id={item.id}
+                    name={item.name}
+                    count={item.count}
+                    image={item.image}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col gap-1 bg-white-background2 rounded-xl">
+                {taxonomyData.map((item, index) => (
+                  <TaxonomyItem key={index} data={item} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

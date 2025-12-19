@@ -48,7 +48,7 @@ export default function FilterSidebar() {
   const filters = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus"];
 
   return (
-    <aside className="w-full md:w-64 shrink-0 flex flex-col gap-6">
+    <aside className="w-full flex flex-col gap-6">
       {/* Tiêu đề */}
       <h2 className="font-space-grotesk text-2xl font-bold text-green-logo">
         Species Explore
@@ -65,7 +65,7 @@ export default function FilterSidebar() {
       </div>
 
       {/* Danh sách bộ lọc */}
-      <div className="flex flex-col">
+      <div className="hidden lg:flex flex-col">
         {filters.map((filter) => (
           <FilterAccordion key={filter} label={filter} />
         ))}

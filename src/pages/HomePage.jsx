@@ -6,7 +6,7 @@ import WhyBionUniqueSection from "../components/home/WhyBionUniqueSection";
 import DataIntegrationSection from "../components/home/DataIntegrationSection";
 import WhoUsesBionSection from "../components/home/WhoUsesBionSection";
 import ContributeSection from "../components/home/ContributeSection";
-import JoinMissionSection from "../components/home/JoinMissionSection";
+import JoinMissionSection from "../components/JoinMissionSection";
 
 const HomePage = () => {
   return (

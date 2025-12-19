@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
 import { cn } from "../../lib/utils";
 
-
-export default function SpeciesCardExplorer({ name, count, image, className }) {
+export default function SpeciesExplorerCard({
+  id,
+  name,
+  count,
+  image,
+  className,
+}) {
   return (
-    <div
+    <Link
+      to={`/species/${id}`}
       className={cn(
         // Layout
         "group flex items-center justify-between overflow-hidden rounded-xl p-6 transition-all duration-300",
@@ -24,13 +31,13 @@ export default function SpeciesCardExplorer({ name, count, image, className }) {
       </div>
 
       {/* IMAGE */}
-      <div className="h-20 w-32 overflow-hidden rounded-lg">
+      <div className="h-20 w-28 md:w-32 shrink-0 overflow-hidden rounded-lg bg-gray-200">
         <img
           src={image}
           alt={name}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
-    </div>
+    </Link>
   );
 }
