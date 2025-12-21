@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 export default function CoreModuleCard({
   title,

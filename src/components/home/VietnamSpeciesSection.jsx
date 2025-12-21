@@ -1,5 +1,5 @@
 import { Button } from "../ui/Button";
-import SpeciesCard from "../ui/SpeciesCard";
+import SpeciesCard from "./components/SpeciesCard";
 
 const speciesList = [
   {

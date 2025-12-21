@@ -1,5 +1,5 @@
 import { Button } from "../ui/Button";
-import HotspotCard from "../ui/HotspotCard";
+import HotspotCard from "./components/HotspotCard";
 
 const hotspots = [
   {

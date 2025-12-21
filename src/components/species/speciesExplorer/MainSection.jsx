@@ -2,9 +2,9 @@ import { useState } from "react";
 import { LayoutGrid, List } from "lucide-react";
 import { cn } from "../../../lib/utils";
 import FilterSidebar from "./FilterSidebar";
-import SpeciesCardExplorer from "../../ui/SpeciesExplorerCard";
 import { taxonomyData } from "./data/taxonomy";
 import TaxonomyItem from "./TaxonomyItem";
+import SpeciesExplorerCard from "../components/SpeciesExplorerCard";
 
 const mockData = Array(8).fill({
   id: 1,
@@ -17,7 +17,7 @@ export default function MainSection() {
   const [viewMode, setViewMode] = useState("grid"); // 'grid' hoặc 'list'
 
   return (
-    <div className="min-h-screen bg-white-background2 py-10">
+    <section className=" bg-white-background2 py-10">
       <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* --- LEFT SIDEBAR --- */}
@@ -64,7 +64,7 @@ export default function MainSection() {
             {viewMode == "grid" ? (
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {mockData.map((item, index) => (
-                  <SpeciesCardExplorer
+                  <SpeciesExplorerCard
                     key={index}
                     id={item.id}
                     name={item.name}
@@ -83,6 +83,6 @@ export default function MainSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 export default function WhoUsesCard({ icon, title, description, className }) {
   const Icon = icon;

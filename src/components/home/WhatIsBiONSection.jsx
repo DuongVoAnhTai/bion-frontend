@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CoreModuleCard from "../ui/CoreModuleCard";
+import CoreModuleCard from "./components/CoreModuleCard";
 
 // Dữ liệu mẫu
 const modules = [

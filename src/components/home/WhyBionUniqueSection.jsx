@@ -1,4 +1,4 @@
-import UniqueFeatureItem from "../ui/UniqueFeatureItem";
+import UniqueFeatureItem from "./components/UniqueFeatureItem";
 import {
   DatabaseIcon,
   InternetIcon,

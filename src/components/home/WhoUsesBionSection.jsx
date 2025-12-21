@@ -1,4 +1,4 @@
-import WhoUsesCard from "../ui/WhoUsesCard";
+import WhoUsesCard from "./components/WhoUsesCard";
 import {
   GuideIcon,
   ParkIcon,

@@ -1,4 +1,4 @@
-import ContributeCard from "../ui/ContributeCard";
+import ContributeCard from "./components/ContributeCard";
 import { UploadIcon, ObserveIcon, IdentifyIcon } from "../../assets/icon";
 
 const actions = [
