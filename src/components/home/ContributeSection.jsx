@@ -41,13 +41,7 @@ export default function ContributeSection() {
         {/* --- GRID --- */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {actions.map((item, index) => (
-            <ContributeCard
-              key={index}
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-              link={item.link}
-            />
+            <ContributeCard key={index} data={item} />
           ))}
         </div>
       </div>

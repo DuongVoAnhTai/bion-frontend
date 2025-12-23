@@ -8,6 +8,8 @@ import AboutPage from "./pages/AboutPage";
 import MainLayout from "./layouts/MainLayout";
 import CommunityPage from "./pages/CommunityPage";
 import ContributePage from "./pages/ContributePage";
+import ProfilePage from "./pages/ProfilePage";
+import PhotographerProfilePage from "./pages/PhotographerProfilePage";
 
 const App = () => {
   return (
@@ -31,6 +33,13 @@ const App = () => {
 
         {/* Contribute */}
         <Route path="/contribute" element={<ContributePage />} />
+
+        {/* Profile */}
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route
+          path="/photographers/:id"
+          element={<PhotographerProfilePage />}
+        />
       </Route>
     </Routes>
   );

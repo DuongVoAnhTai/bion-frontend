@@ -64,13 +64,7 @@ export default function MainSection() {
             {viewMode == "grid" ? (
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {mockData.map((item, index) => (
-                  <SpeciesExplorerCard
-                    key={index}
-                    id={item.id}
-                    name={item.name}
-                    count={item.count}
-                    image={item.image}
-                  />
+                  <SpeciesExplorerCard key={index} data={item} />
                 ))}
               </div>
             ) : (

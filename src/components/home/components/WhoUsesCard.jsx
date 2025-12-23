@@ -1,7 +1,7 @@
 import { cn } from "../../../lib/utils";
 
-export default function WhoUsesCard({ icon, title, description, className }) {
-  const Icon = icon;
+export default function WhoUsesCard({ data, className }) {
+  const Icon = data.icon;
 
   return (
     <div
@@ -19,9 +19,11 @@ export default function WhoUsesCard({ icon, title, description, className }) {
 
       {/* Content */}
       <h3 className="mb-3 font-space-grotesk text-2xl font-bold text-black-text">
-        {title}
+        {data.title}
       </h3>
-      <p className="font-poppins text-base text-gray-dark">{description}</p>
+      <p className="font-poppins text-base text-gray-dark">
+        {data.description}
+      </p>
     </div>
   );
 }

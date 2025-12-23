@@ -2,10 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { cn } from "../../../lib/utils";
 
 export default function CoreModuleCard({
-  title,
-  description,
-  image,
-  link,
+  data,
   className,
   isActive,
   onMobileClick,
@@ -24,7 +21,7 @@ export default function CoreModuleCard({
 
   const handleButtonViewMore = (e) => {
     e.stopPropagation();
-    navigate(link);
+    navigate(data.link);
   };
 
   return (
@@ -41,7 +38,7 @@ export default function CoreModuleCard({
           "absolute inset-0 bg-cover bg-center transition-transform duration-700",
           isActive ? "scale-110" : "group-hover:scale-110"
         )}
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${data.image})` }}
       />
 
       {/* 2. Overlay */}
@@ -61,7 +58,7 @@ export default function CoreModuleCard({
             isActive ? "-translate-y-2" : "group-hover:-translate-y-2"
           )}
         >
-          {title}
+          {data.title}
         </h3>
 
         {/* Hidden Content (display when hover) */}
@@ -75,7 +72,7 @@ export default function CoreModuleCard({
         >
           <div className="overflow-hidden flex flex-col items-center">
             <p className="mt-2 text-base text-gray-border line-clamp-3">
-              {description}
+              {data.description}
             </p>
 
             {/* View More Button */}

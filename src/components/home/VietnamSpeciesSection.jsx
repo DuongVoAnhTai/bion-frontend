@@ -76,10 +76,7 @@ export default function VietnamSpeciesSection() {
             return (
               <SpeciesCard
                 key={index}
-                id={item.id}
-                commonName={item.commonName}
-                scientificName={item.scientificName}
-                image={item.image}
+                data={item}
                 className={visibilityClass}
               />
             );

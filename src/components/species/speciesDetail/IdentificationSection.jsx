@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function IdentificationSection({ data }) {
+  if (!data) return null;
+
   return (
     <section className="bg-white-background2 pt-6 pb-10">
       <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
@@ -11,8 +13,7 @@ export default function IdentificationSection({ data }) {
 
         {/* --- DESCRIPTION TEXT --- */}
         <div className="flex flex-col gap-6 max-w-none text-base md:text-lg leading-relaxed text-gray-dark font-poppins">
-          {/* Loop qua các đoạn văn bản (nếu có trong data) hoặc dùng text cứng từ mẫu */}
-          {data.identification.content.map((paragraph, index) => (
+          {data.content.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
 
@@ -21,7 +22,7 @@ export default function IdentificationSection({ data }) {
             <span className="font-bold text-gray-dark">
               Conservation & threats summary:
             </span>{" "}
-            {data.identification.conservationSummary}
+            {data.conservationSummary}
           </p>
         </div>
 

@@ -1,18 +1,12 @@
 import { Link } from "react-router-dom";
 import { cn } from "../../../lib/utils";
 
-export default function ContributeCard({
-  icon,
-  title,
-  description,
-  link,
-  className,
-}) {
-  const Icon = icon;
+export default function ContributeCard({ data, className }) {
+  const Icon = data.icon;
 
   return (
     <Link
-      to={link}
+      to={data.link}
       className={cn(
         "flex flex-col items-start rounded-4xl p-8",
         "bg-white-background2 border border-gray-light",
@@ -21,7 +15,6 @@ export default function ContributeCard({
         "hover:shadow-species",
         "cursor-pointer",
         "hover:border-green-logo/30",
-
         className
       )}
     >
@@ -32,12 +25,12 @@ export default function ContributeCard({
 
       {/* Title */}
       <h3 className="mb-3 font-space-grotesk text-2xl font-bold text-black-text">
-        {title}
+        {data.title}
       </h3>
 
       {/* Description */}
       <p className="font-poppins text-base text-gray-dark leading-relaxed">
-        {description}
+        {data.description}
       </p>
     </Link>
   );

@@ -71,10 +71,7 @@ export default function VietnamHotspotsSection() {
             return (
               <HotspotCard
                 key={index}
-                id={item.id}
-                name={item.name}
-                location={item.location}
-                image={item.image}
+                data={item}
                 className={visibilityClass}
               />
             );

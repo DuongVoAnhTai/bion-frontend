@@ -58,13 +58,7 @@ export default function WhoUsesBionSection() {
         {/* --- GRID LAYOUT --- */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-6">
           {userGroups.map((item, index) => (
-            <WhoUsesCard
-              key={index}
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-              className={item.colSpan}
-            />
+            <WhoUsesCard key={index} data={item} className={item.colSpan} />
           ))}
         </div>
       </div>

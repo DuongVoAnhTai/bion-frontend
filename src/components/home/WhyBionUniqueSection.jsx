@@ -48,12 +48,7 @@ export default function WhyBionUniqueSection() {
         <div className="rounded-4xl bg-white-background2 p-8 shadow-lg md:p-12 lg:px-16 lg:py-14">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
             {features.map((item, index) => (
-              <UniqueFeatureItem
-                key={index}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <UniqueFeatureItem key={index} data={item} />
             ))}
           </div>
         </div>

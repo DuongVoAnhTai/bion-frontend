@@ -73,10 +73,7 @@ export default function WhatIsBionSection() {
           {modules.map((module, index) => (
             <CoreModuleCard
               key={index}
-              title={module.title}
-              link={module.link}
-              description={module.description}
-              image={module.image}
+              data={module}
               isActive={activeIndex === index}
               onMobileClick={() => handleMobileClick(index)}
             />
