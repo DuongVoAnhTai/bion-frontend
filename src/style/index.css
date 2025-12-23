@@ -23,12 +23,13 @@
 }
 
 @layer utilities {
+  /* Ẩn thanh cuộn */
   .no-scrollbar::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome, Safari, Opera */
   }
 
   .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE và Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

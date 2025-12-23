@@ -51,7 +51,7 @@ export default function FilterSidebar() {
     <aside className="w-full flex flex-col gap-6">
       {/* Tiêu đề */}
       <h2 className="font-space-grotesk text-2xl font-bold text-green-logo">
-        Species Explore
+        Explore Species
       </h2>
 
       {/* Ô tìm kiếm */}
