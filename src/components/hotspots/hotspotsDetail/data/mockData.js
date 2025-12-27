@@ -1,0 +1,230 @@
+export const mockData = {
+  name: "Nam Cat Tien National Park",
+  images: [
+    "/src/assets/images/cat-tien.png",
+    "/src/assets/images/cat-ba.png",
+    "/src/assets/images/cuc-phuong.png",
+  ],
+  priority: "High",
+  habitat: "Tropical Lowland Forest",
+  info: {
+    location: "Northeast of Ho Chi Minh City (3-4 hours by car)",
+    area: "71,920 hectares",
+    uniques: "Gibbons, Gaurs, Hornbills, Pheasants, >350 Bird Species",
+    bestTime: "Dry Season (December - May)",
+    highlights: "Rich Biodiversity, Trekking, Birdwatching, Photography",
+    iucnStatus: "Important Biodiversity Area, WWF Global 200 Ecoregion",
+  },
+
+  overview: {
+    content: [
+      "Cat Tien National Park is a perfect destination for wildlife enthusiasts. It boasts thriving populations of various species including gaurs, gibbons, hornbills, pheasants - and many others. Visitors have a rare opportunity to spot Gaurs in their natural habitat, making it a must-visit location for those who love to observe and admire the beauty of wildlife. With its rich and diverse ecosystem, Cat Tien is a true haven for nature lovers and a great opportunity to experience the beauty and abundance of wildlife in Vietnam.",
+      "As mentioned above, Cat Tien National Park is home to a variety of species, such as gaurs, gibbons, hornbills, pheasants, etc. Among Vietnam’s national parks, Cat Tien stands out as one of the best places for birding and wildlife photography. Since the park is greatly wide, exploring it with a guide will save your time to spot as many creatures as possible.",
+    ],
+    images: [
+      "/src/assets/images/cat-ba.png",
+      "/src/assets/images/cat-ba.png",
+      "/src/assets/images/cat-ba.png",
+      "/src/assets/images/cat-ba.png",
+    ],
+  },
+
+  speciesSection: {
+    description:
+      "Cat Tien National Park is a perfect destination for wildlife enthusiasts. It boasts thriving populations of various species including gaurs, gibbons, hornbills, pheasants - and many others.",
+    items: [
+      {
+        id: 1,
+        commonName: "Bar-bellied Pitta",
+        scientificName: "Hydrornis elliotii",
+        image: "/src/assets/images/pitta1.png",
+      },
+      {
+        id: 2,
+        commonName: "Bar-bellied Pitta",
+        scientificName: "Hydrornis elliotii",
+        image: "/src/assets/images/species-detail.png",
+      },
+      {
+        id: 3,
+        commonName: "Blue-winged Pitta",
+        scientificName: "Pitta moluccensis",
+        image: "/src/assets/images/pitta2.png",
+      },
+      {
+        id: 4,
+        commonName: "Ruby-eyed Pit Viper",
+        scientificName: "Trimeresurus rubeus",
+        image: "/src/assets/images/pit-viper.png",
+      },
+      {
+        id: 5,
+        commonName: "Bar-bellied Pitta",
+        scientificName: "Hydrornis elliotii",
+        image: "/src/assets/images/pitta1.png",
+      },
+      {
+        id: 6,
+        commonName: "Bar-bellied Pitta",
+        scientificName: "Hydrornis elliotii",
+        image: "/src/assets/images/species-detail.png",
+      },
+      {
+        id: 7,
+        commonName: "Blue-winged Pitta",
+        scientificName: "Pitta moluccensis",
+        image: "/src/assets/images/pitta2.png",
+      },
+      {
+        id: 8,
+        commonName: "Ruby-eyed Pit Viper",
+        scientificName: "Trimeresurus rubeus",
+        image: "/src/assets/images/pit-viper.png",
+      },
+    ],
+  },
+
+  seasonalSection: {
+    description:
+      "As mentioned above, Cat Tien National Park is home to a variety of species, such as gaurs, gibbons, hornbills, pheasants, etc. Among Vietnam’s national parks, Cat Tien stands out as one of the best places for birding and wildlife photography. Since the park is greatly wide, exploring it with a guide will save your time to spot as many creatures as possible.",
+    chartData: [
+      { month: "Jan", herp: 40, primate: 60, bird: 55 },
+      { month: "Feb", herp: 45, primate: 62, bird: 58 },
+      { month: "Mar", herp: 55, primate: 68, bird: 65 },
+      { month: "Apr", herp: 70, primate: 75, bird: 80 },
+      { month: "May", herp: 85, primate: 80, bird: 95 },
+      { month: "Jun", herp: 90, primate: 78, bird: 100 },
+      { month: "Jul", herp: 88, primate: 76, bird: 98 },
+      { month: "Aug", herp: 82, primate: 74, bird: 92 },
+      { month: "Sep", herp: 75, primate: 72, bird: 85 },
+      { month: "Oct", herp: 65, primate: 70, bird: 75 },
+      { month: "Nov", herp: 50, primate: 65, bird: 65 },
+      { month: "Dec", herp: 42, primate: 62, bird: 58 },
+    ],
+  },
+
+  recentSightings: [
+    {
+      id: 1,
+      userId: "john-doe-123",
+      speciesCount: 19,
+      date: "3 Dec 2025",
+      time: "9:27 AM",
+      location: "Cat Tien National Park",
+      province: "Dong Nai",
+      observer: "John Doe",
+    },
+    {
+      id: 2,
+      userId: "john-doe-123",
+      speciesCount: 19,
+      date: "3 Dec 2025",
+      time: "9:27 AM",
+      location: "Cat Tien National Park",
+      province: "Dong Nai",
+      observer: "John Doe",
+    },
+    {
+      id: 3,
+      userId: "john-doe-123",
+      speciesCount: 19,
+      date: "3 Dec 2025",
+      time: "9:27 AM",
+      location: "Cat Tien National Park",
+      province: "Dong Nai",
+      observer: "John Doe",
+    },
+  ],
+
+  media: [
+    {
+      id: 1,
+      image: "/src/assets/images/cat-ba.png",
+      date: "23 Feb 2020",
+      author: "John Saint",
+      authorId: "john-saint-1",
+      location: "Tan Phu Forest Enterprise, Dong Nai, Vietnam",
+    },
+    {
+      id: 2,
+      image: "/src/assets/images/cat-ba.png",
+      date: "23 Feb 2020",
+      author: "John Saint",
+      authorId: "js1",
+      location: "Tan Phu Forest Enterprise, Dong Nai, Vietnam",
+    },
+    {
+      id: 3,
+      image: "/src/assets/images/cat-ba.png",
+      date: "23 Feb 2020",
+      author: "John Saint",
+      authorId: "js1",
+      location: "Tan Phu Forest Enterprise, Dong Nai, Vietnam",
+    },
+    {
+      id: 4,
+      image: "/src/assets/images/cat-ba.png",
+      date: "23 Feb 2020",
+      author: "John Saint",
+      authorId: "js1",
+      location: "Tan Phu Forest Enterprise, Dong Nai, Vietnam",
+    },
+    {
+      id: 5,
+      image: "/src/assets/images/cat-ba.png",
+      date: "23 Feb 2020",
+      author: "John Saint",
+      authorId: "js1",
+      location: "Tan Phu Forest Enterprise, Dong Nai, Vietnam",
+    },
+    {
+      id: 6,
+      image: "/src/assets/images/cat-ba.png",
+      date: "23 Feb 2020",
+      author: "John Saint",
+      authorId: "js1",
+      location: "Tan Phu Forest Enterprise, Dong Nai, Vietnam",
+    },
+    {
+      id: 7,
+      image: "/src/assets/images/cat-ba.png",
+      date: "23 Feb 2020",
+      author: "John Saint",
+      authorId: "js1",
+      location: "Tan Phu Forest Enterprise, Dong Nai, Vietnam",
+    },
+  ],
+
+  otherHotspots: [
+    {
+      id: 10,
+      name: "Cat Ba Island",
+      location: "Hai phong, Northern Vietnam",
+      image: "/src/assets/images/cat-tien.png",
+    },
+    {
+      id: 11,
+      name: "Sapa - Hoang Lien Son National Park",
+      location: "Lao Cai, Northern Vietnam",
+      image: "/src/assets/images/cat-tien.png",
+    },
+    {
+      id: 12,
+      name: "Tam Dao National Park",
+      location: "Vinh Phuc, Northern Vietnam",
+      image: "/src/assets/images/cat-tien.png",
+    },
+    {
+      id: 13,
+      name: "Can Gio Mangrove Forest",
+      location: "Can Gio, Southern Vietnam",
+      image: "/src/assets/images/cat-tien.png",
+    },
+    {
+      id: 14,
+      name: "Cuc Phuong National Park",
+      location: "Ninh Binh, Northern Vietnam",
+      image: "/src/assets/images/cat-tien.png",
+    },
+  ],
+};

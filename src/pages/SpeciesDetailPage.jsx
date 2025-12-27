@@ -11,7 +11,7 @@ const SpeciesDetailPage = () => {
   const data = mockData;
 
   return (
-    <div className="flex flex-col bg-white">
+    <div className="flex flex-col bg-white-background2">
       <OverviewSection data={data} />
 
       <div className="bg-white-background2 pt-6 pb-10">

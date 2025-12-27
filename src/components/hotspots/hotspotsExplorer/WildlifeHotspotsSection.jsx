@@ -1,6 +1,6 @@
-import HotspotCard from "../../home/components/HotspotCard";
 import { ChevronDown } from "lucide-react";
 import { Button } from "../../ui/Button";
+import HotspotCard from "../../HotspotCard";
 
 export default function WildlifeHotspotsSection({ data }) {
   return (

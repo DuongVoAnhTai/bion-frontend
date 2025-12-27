@@ -18,7 +18,7 @@ export default function MediaCard({ data }) {
         <span className="text-sm text-gray">{data.date}</span>
 
         {/* Author */}
-        <div className="flex datas-center gap-1 text-black-text font-semibold">
+        <div className="flex item-center gap-1 text-black-text font-semibold">
           <span>©</span>
           <Link
             to={`/photographers/${data.authorId}`}

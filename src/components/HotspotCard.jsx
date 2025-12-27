@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { cn } from "../../../lib/utils";
-import { LocationsIcon } from "../../../assets/icon";
+import { LocationsIcon } from "../assets/icon";
+import { cn } from "../lib/utils";
 
 export default function HotspotCard({ data, className }) {
   return (
