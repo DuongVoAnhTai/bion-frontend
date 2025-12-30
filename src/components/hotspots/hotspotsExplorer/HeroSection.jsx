@@ -22,7 +22,7 @@ export default function HeroSection() {
 
       {/* 4. CONTENT LAYER */}
       <div className="container relative z-30 mx-auto px-4 md:px-8 xl:px-[156px]">
-        <div className="flex flex-col items-center gap-6 max-w-4xl mx-auto">
+        <div className="flex flex-col items-center gap-6   mx-auto">
           {/* Main Heading */}
           <h1 className="font-space-grotesk text-4xl md:text-6xl font-bold text-white-background2 leading-tight">
             Discover Vietnam Wildlife Hotspots{" "}
