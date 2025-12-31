@@ -11,10 +11,12 @@
   --color-gray: #a1a1a1;
   --color-gray-light: #c6c6c6;
   --color-gray-dark: #5b5b5b;
+  --color-gray-placeholder: #d9d9d9;
   --color-black: #000000;
   --color-white: #ffffff;
   --color-gray-border: #dedede;
   --color-green-soft: #2ba78c1a;
+  --color-green-border-fade: #2ba78c66;
 
   --text-logo: 30px;
 

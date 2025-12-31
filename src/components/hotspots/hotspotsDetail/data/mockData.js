@@ -15,6 +15,10 @@ export const mockData = {
     highlights: "Rich Biodiversity, Trekking, Birdwatching, Photography",
     iucnStatus: "Important Biodiversity Area, WWF Global 200 Ecoregion",
   },
+  coords: {
+    lat: 11.4239, // Vĩ độ
+    lng: 107.4277, // Kinh độ
+  },
 
   overview: {
     content: [

@@ -14,6 +14,23 @@ import InfoCard from "../components/InfoCard";
 export default function OverviewSection({ data }) {
   if (!data) return null;
 
+  // HÀM XỬ LÝ CHỈ ĐƯỜNG
+  const handleGetDirection = () => {
+    const { lat, lng } = data.coords || {};
+
+    if (!lat || !lng) {
+      alert("Location coordinates not found.");
+      return;
+    }
+
+    // Tạo URL Google Maps dẫn đến tính năng Chỉ đường (Directions)
+    // destination={lat},{lng} : Điểm đến là tọa độ của Hotspot
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+
+    // Mở tab mới với cấu hình an toàn (noopener, noreferrer)
+    window.open(googleMapsUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className="bg-white-background2 pb-6 pt-10">
       <div className="container mx-auto px-4 md:px-8 xl:px-[156px]">
@@ -83,7 +100,10 @@ export default function OverviewSection({ data }) {
           <div className="hidden md:block w-px h-8 bg-gray-light mx-4" />
 
           {/* Slot 3 */}
-          <Button className="rounded-full bg-green-logo hover:bg-green-logo/90 text-white px-8 py-6 flex items-center justify-center gap-2 text-lg w-full md:w-auto">
+          <Button
+            onClick={handleGetDirection}
+            className="rounded-full bg-green-logo hover:bg-green-logo/90 text-white px-8 py-6 flex items-center justify-center gap-2 text-lg w-full md:w-auto"
+          >
             Get direction <ArrowUpRight size={20} />
           </Button>
         </div>

@@ -13,11 +13,12 @@ export default function DistributionMap({ data }) {
   const centerVietnam = [16.0446, 108.2067];
 
   return (
-    <div className="h-[300px] w-full rounded-3xl overflow-hidden border border-gray-light/30 shadow-inner relative group">
+    <div className="h-[350px] w-full rounded-3xl overflow-hidden border border-gray-light/30 shadow-inner relative group">
       <MapContainer
         center={centerVietnam}
         zoom={5}
         scrollWheelZoom={false}
+        attributionControl={false}
         className="h-full w-full"
       >
         {/* LỚP ĐIỀU KHIỂN CHẾ ĐỘ XEM */}
@@ -25,25 +26,25 @@ export default function DistributionMap({ data }) {
           {/* 1. Chế độ Mặc định (Sạch sẽ, dễ nhìn điểm) */}
           <BaseLayer checked name="Default (Light)">
             <TileLayer
-              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-              attribution="&copy; CARTO"
+              url="https://mt1.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}"
+              // attribution="&copy; CARTO"
             />
           </BaseLayer>
           {/* 2. Chế độ Vệ tinh (Nhìn rõ rừng, sông, núi) */}
           <BaseLayer name="Satellite">
             <TileLayer
-              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EBP, and the GIS User Community"
+              url="https://mt1.google.com/vt/lyrs=s,h&hl=en&x={x}&y={y}&z={z}"
+              // attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EBP, and the GIS User Community"
             />
           </BaseLayer>
 
-          {/* 3. Chế độ Địa hình (Nhìn rõ độ cao) */}
+          {/* 3. Chế độ Địa hình (Nhìn rõ độ cao)
           <BaseLayer name="Terrain">
             <TileLayer
-              url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
-              attribution="Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap (CC-BY-SA)"
+              url="https://mt1.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}"
+              // attribution="Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap (CC-BY-SA)"
             />
-          </BaseLayer>
+          </BaseLayer> */}
         </LayersControl>
 
         {/* VẼ CÁC ĐIỂM QUAN SÁT */}
@@ -56,7 +57,7 @@ export default function DistributionMap({ data }) {
             ]}
             radius={8}
             pathOptions={{
-              fillColor: "#2BA78C",
+              fillColor: "#450efb",
               color: "#ffffff",
               weight: 2,
               opacity: 1,
