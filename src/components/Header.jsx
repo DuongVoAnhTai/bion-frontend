@@ -5,9 +5,10 @@ import logo from "../assets/images/logo.svg";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/Button";
 
-const NavItem = ({ to, children }) => (
+const NavItem = ({ to, children, onClick }) => (
   <NavLink
     to={to}
+    onClick={onClick}
     className={({ isActive }) =>
       cn(
         "text-[20px] font-medium text-black-text hover:text-green-logo transition-colors font-poppins",
@@ -39,9 +40,11 @@ export default function Header() {
         </nav>
         <div className="flex items-center">
           <div className="hidden md:block">
-            <Button variant="outline" size="lg">
-              Sign In
-            </Button>
+            <Link to="/login">
+              <Button variant="outline" size="lg">
+                Sign In
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -67,9 +70,15 @@ export default function Header() {
           <NavItem to="/about" onClick={() => setIsMenuOpen(false)}>
             About
           </NavItem>
-          <Button variant="outline" size="sm" className="w-full mt-2">
-            Sign In
-          </Button>
+          <Link
+            to="/login"
+            className="w-full"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Button variant="outline" size="sm" className="w-full mt-2">
+              Sign In
+            </Button>
+          </Link>
         </div>
       )}
     </header>

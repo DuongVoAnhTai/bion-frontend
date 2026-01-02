@@ -1,3 +1,4 @@
+// src/components/about/RoadmapSection.jsx
 import {
   FoundationIcon,
   ExpansionIcon,
@@ -9,9 +10,9 @@ import RoadmapPhase from "./components/RoadmapPhase";
 const roadmapData = [
   {
     phase: "3-6 months",
+    label: "Foundation",
     timeframe: "3-6 months",
     icon: FoundationIcon,
-    type: "foundation",
     goal: "Build a solid and reliable biodiversity foundation.",
     deliverables: [
       "Species taxonomy database",
@@ -22,9 +23,9 @@ const roadmapData = [
   },
   {
     phase: "6-12 months",
+    label: "Expansion",
     timeframe: "6-12 months",
     icon: ExpansionIcon,
-    type: "expansion",
     goal: "Expand depth, coverage, and usability of the platform.",
     deliverables: [
       "Seasonal patterns & biodiversity insights",
@@ -35,9 +36,9 @@ const roadmapData = [
   },
   {
     phase: "12-24 months",
+    label: "AI System",
     timeframe: "12-24 months",
     icon: AIIcon,
-    type: "ai",
     goal: "Transform data into an intelligent decision-support system.",
     deliverables: [
       "Smart data classification",
@@ -48,9 +49,9 @@ const roadmapData = [
   },
   {
     phase: "24+ months",
+    label: "Network",
     timeframe: "24+ months",
     icon: NetworkIcon,
-    type: "network",
     goal: "Empower community participation and real-world engagement.",
     deliverables: [
       "Mobile PWA application",
@@ -70,25 +71,24 @@ export default function RoadmapSection() {
           <h2 className="font-space-grotesk text-4xl font-bold text-black-text mb-6">
             Our Roadmap
           </h2>
-          <p className="max-w-3xl mx-auto font-poppins text-gray-dark text-lg mb-4">
+          <p className="max-w-3xl mx-auto font-poppins text-gray-dark text-lg mb-6">
             BiON grows through clearly defined phases, each building long-term
-            value for biodiversity, tourism, and conservation communities.
+            value for biodiversity...
           </p>
-          <div className="flex items-center justify-center gap-4 text-gray text-sm uppercase tracking-widest">
-            <div className="w-px h-12 bg-gray-light" />
+          <div className="flex items-center justify-center gap-4 text-gray text-xs uppercase tracking-[0.3em] font-bold">
+            <div className="w-px h-10 bg-gray-light" />
             A Purpose-Driven Development Journey
-            <div className="w-px h-12 bg-gray-light" />
+            <div className="w-px h-10 bg-gray-light" />
           </div>
         </div>
 
-        {/* --- TIMELINE GRID --- */}
+        {/* --- TIMELINE AREA --- */}
         <div className="relative">
-          {/* Trục đường kẻ ngang (Chỉ hiện trên Desktop) */}
-          <div className="hidden lg:block absolute top-13 left-0 right-0 h-px bg-gray-light z-0" />
+          <div className="hidden lg:block absolute top-18 left-0 right-0 h-0.5 bg-gray-light/60 z-0" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
             {roadmapData.map((item, index) => (
-              <RoadmapPhase key={index} data={item} className={item.type} />
+              <RoadmapPhase key={index} data={item} />
             ))}
           </div>
         </div>

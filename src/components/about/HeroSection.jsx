@@ -1,6 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import heroBg from "/src/assets/images/occurence-map.png";
-import DataIntegrationSection from "./components/DataIntegrationSection";
+import DataIntegrationSection from "../DataIntegrationSection";
 
 export default function HeroSection() {
   return (
@@ -66,9 +66,9 @@ export default function HeroSection() {
             <span className="text-[10px] uppercase tracking-[0.3em] text-gray-dark mb-2">
               Data Integration
             </span>
-            {/* <div className="w-full h-px bg-gray-light" /> */}
-            <DataIntegrationSection />
           </div>
+          
+          <DataIntegrationSection />
         </div>
       </div>
     </section>

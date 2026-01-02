@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+
+import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import SpeciesExplorePage from "./pages/SpeciesExplorePage";
 import SpeciesDetailPage from "./pages/SpeciesDetailPage";
@@ -8,12 +10,21 @@ import AboutPage from "./pages/AboutPage";
 import MainLayout from "./layouts/MainLayout";
 import CommunityPage from "./pages/CommunityPage";
 import ContributePage from "./pages/ContributePage";
+import ChecklistPage from "./pages/ChecklistPage";
+import BlogPage from "./pages/BlogPage";
 import ProfilePage from "./pages/ProfilePage";
 import PhotographerProfilePage from "./pages/PhotographerProfilePage";
+
+import ProtectedRoute from "./components/ProtectedRoute";
+import ObservationPage from "./pages/ObservationPage";
 
 const App = () => {
   return (
     <Routes>
+      {/* Login */}
+      <Route path="/login" element={<LoginPage />} />
+
+      {/* Main */}
       <Route path="/" element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
 
@@ -32,13 +43,54 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
 
         {/* Contribute */}
-        <Route path="/contribute" element={<ContributePage />} />
+        <Route
+          path="/contribute"
+          element={
+            <ProtectedRoute>
+              <ContributePage />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Blog */}
+        <Route path="/blog" element={<BlogPage />} />
+
+        {/* Observation */}
+        <Route
+          path="/observation"
+          element={
+            <ProtectedRoute>
+              <ObservationPage />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Checklist */}
+        <Route
+          path="/checklist/:id"
+          element={
+            <ProtectedRoute>
+              <ChecklistPage />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Profile */}
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/photographers/:id"
-          element={<PhotographerProfilePage />}
+          element={
+            <ProtectedRoute>
+              <PhotographerProfilePage />
+            </ProtectedRoute>
+          }
         />
       </Route>
     </Routes>

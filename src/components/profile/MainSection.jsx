@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 import { DoubleDownIcon } from "../../assets/icon";
 import { cn } from "../../lib/utils";
-import ChecklistCard from "../community/components/ChecklistCard";
+import ChecklistCard from "../ChecklistCard";
 import HotspotCard from "../HotspotCard";
 import SpeciesProfileCard from "./components/SpeciesProfileCard";
 

@@ -5,7 +5,7 @@ export default function SightingRow({ data }) {
   return (
     <div className="flex flex-col md:flex-row md:items-center justify-between py-6 border-t border-gray-light last:border-b transition-colors hover:bg-gray-50/50">
       {/* TRÁI: Badge Số lượng & Thời gian */}
-      <div className="flex items-center gap-6 mb-4 md:mb-0">
+      <Link to={`/checklist/${data.id}`} className="flex items-center gap-6 mb-4 md:mb-0 transition-transform duration-500 hover:scale-105">
         {/* Badge */}
         <div className="flex flex-col items-center justify-center w-20 h-20 shrink-0 rounded-xl bg-green-logo/10 border border-green-logo/5">
           <span className="text-3xl font-bold text-green-logo leading-none">
@@ -24,7 +24,7 @@ export default function SightingRow({ data }) {
             {data.time}
           </span>
         </div>
-      </div>
+      </Link>
 
       {/* GIỮA: Địa điểm */}
       <div className="flex justify-start md:justify-center items-center gap-2 flex-1 md:px-10 mb-4 md:mb-0">

@@ -1,4 +1,4 @@
-import SightingRow from "../../species/components/SightingRow";
+import SightingRow from "../../SightingRow";
 
 export default function ChecklistSection({ data }) {
   if (!data || data.length === 0) return null;

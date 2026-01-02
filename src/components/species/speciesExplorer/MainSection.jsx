@@ -36,7 +36,7 @@ export default function MainSection() {
               <button
                 onClick={() => setViewMode("grid")}
                 className={cn(
-                  "flex items-center gap-2 text-base font-medium transition-colors",
+                  "flex items-center gap-2 text-base font-medium transition-colors cursor-pointer",
                   viewMode === "grid"
                     ? "text-green-logo font-bold"
                     : "text-gray hover:text-black-text"
@@ -49,7 +49,7 @@ export default function MainSection() {
               <button
                 onClick={() => setViewMode("list")}
                 className={cn(
-                  "flex items-center gap-2 text-base font-medium transition-colors",
+                  "flex items-center gap-2 text-base font-medium transition-colors cursor-pointer",
                   viewMode === "list"
                     ? "text-green-logo font-bold"
                     : "text-gray hover:text-black-text"

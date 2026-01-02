@@ -1,4 +1,4 @@
-import SightingRow from "../components/SightingRow";
+import SightingRow from "../../SightingRow";
 
 export default function RecentSightingsSection({ data }) {
   if (!data || data.length === 0) return null;

@@ -1,19 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 import { MapPin, User } from "lucide-react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../lib/utils";
 
 export default function ChecklistCard({ data }) {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/`);
+    navigate(`/checklist/${data.id}`);
   };
 
   const handleUserClick = (e) => {
     e.stopPropagation();
     navigate(`/photographers/${data.userId}`);
   };
-  
+
   return (
     <div
       onClick={handleCardClick}
@@ -23,7 +23,7 @@ export default function ChecklistCard({ data }) {
       )}
     >
       {/* --- TẦNG TRÊN: SỐ LƯỢNG & NGÀY GIỜ --- */}
-      <div className="flex justify-around items-start">
+      <Link to={`checklist/${data.id}`} className="flex justify-around items-start">
         {/* Khối bên trái: 19 SPECIES */}
         <div className="flex flex-col items-start border-r border-gray-light/50 pr-4 min-w-20">
           <span className="text-4xl font-bold text-green-logo leading-none">
@@ -41,7 +41,7 @@ export default function ChecklistCard({ data }) {
           </span>
           <span className="text-[13px] text-gray mt-0.5">{data.time}</span>
         </div>
-      </div>
+      </Link>
 
       {/* --- TẦNG DƯỚI: ĐỊA ĐIỂM & USER --- */}
       <div className="flex flex-col gap-2 pt-2">

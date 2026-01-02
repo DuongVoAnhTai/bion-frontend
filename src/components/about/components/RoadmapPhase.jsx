@@ -1,67 +1,62 @@
-import { cn } from "../../../lib/utils";
-
-export default function RoadmapPhase({ data, className }) {
+// src/components/about/RoadmapPhase.jsx
+export default function RoadmapPhase({ data }) {
   const Icon = data.icon;
 
   return (
-    <div  
-      className={cn(
-        "flex flex-col items-start font-poppins relative",
-        className
-      )}
-    >
-      {/* 1. TIMELINE DOT & LABEL */}
-      <div className="flex flex-col gap-4 mb-8">
+    <div className="flex flex-col items-start font-poppins relative">
+      {/* TẦNG 1: THỜI GIAN */}
+      <div className="h-10 mb-2">
         <span className="text-xl font-bold text-gray-dark font-space-grotesk">
           {data.phase}
         </span>
-        {/* Điểm nút trên trục thời gian */}
-        <div className="w-4 h-4 rounded-full bg-green-logo relative z-10" />
       </div>
 
-      {/* 2. PHASE BADGE (Pill shape) */}
-      <div className="flex items-center gap-3 bg-green-logo text-white px-6 py-3 rounded-full mb-8 shadow-md">
-        <Icon className="w-6 h-6" />
-        <span className="font-bold text-lg">
-          {className === "foundation"
-            ? "Foundation"
-            : className === "expansion"
-            ? "Expansion"
-            : className === "ai"
-            ? "AI System"
-            : "Network"}
-        </span>
+      {/* TẦNG 2: ĐIỂM NÚT (DOT) */}
+      <div className="h-12 flex items-center relative z-10">
+        {/* Điểm nút xanh có vòng đệm trắng bao quanh để "ngắt" đường kẻ ngang */}
+        <div className="w-5 h-5 rounded-full bg-green-logo ring-[6px] ring-white-background2 shadow-sm" />
       </div>
 
-      {/* 3. DETAILS */}
-      <div className="flex flex-col gap-6">
-        <div>
-          <span className="text-green-logo font-bold">Timeframe:</span>
-          <span className="text-gray-dark ml-2">{data.timeframe}</span>
+      {/* TẦNG 3: BADGE VÀ NỘI DUNG */}
+      <div className="mt-6 flex flex-col items-start">
+        {/* Phase Badge */}
+        <div className="flex items-center gap-3 bg-green-logo text-white px-6 py-2.5 rounded-full mb-8 shadow-sm">
+          <Icon className="w-5 h-5" />
+          <span className="font-bold text-base whitespace-nowrap">{data.label}</span>
         </div>
 
-        <div>
-          <span className="text-green-logo font-bold block mb-1">Goal:</span>
-          <p className="text-gray-dark text-[15px] leading-relaxed">
-            {data.goal}
-          </p>
-        </div>
+        {/* Info */}
+        <div className="flex flex-col gap-5">
+          <div className="text-[15px]">
+            <span className="text-green-logo font-bold uppercase text-xs tracking-wider">
+              Timeframe:
+            </span>
+            <p className="text-gray-dark mt-1">{data.timeframe}</p>
+          </div>
 
-        <div>
-          <span className="text-green-logo font-bold block mb-2">
-            Key Deliverables:
-          </span>
-          <ul className="space-y-2">
-            {data.deliverables.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex items-start gap-2 text-gray-dark text-[14px]"
-              >
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="text-[15px]">
+            <span className="text-green-logo font-bold uppercase text-xs tracking-wider">
+              Goal:
+            </span>
+            <p className="text-gray-dark mt-1 leading-relaxed">{data.goal}</p>
+          </div>
+
+          <div className="text-[15px]">
+            <span className="text-green-logo font-bold uppercase text-xs tracking-wider block mb-3">
+              Key Deliverables:
+            </span>
+            <ul className="space-y-3">
+              {data.deliverables.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-3 text-gray-dark text-[14px]"
+                >
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green-logo/40 shrink-0" />
+                  <span className="leading-tight">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

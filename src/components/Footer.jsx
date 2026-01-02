@@ -38,9 +38,7 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <FooterLink to="/species-research">
-                    Species Researchs
-                  </FooterLink>
+                  <FooterLink to="/species">Species Researchs</FooterLink>
                 </li>
                 <li>
                   <FooterLink to="/species">Search Species</FooterLink>
@@ -56,14 +54,10 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <FooterLink to="/submit-observation">
-                    Submit Observation
-                  </FooterLink>
+                  <FooterLink to="/observation">Submit Observation</FooterLink>
                 </li>
                 <li>
-                  <FooterLink to="/identify-species">
-                    Identify Species
-                  </FooterLink>
+                  <FooterLink to="/contribute">Identify Species</FooterLink>
                 </li>
                 <li>
                   <FooterLink to="/blog">Blog</FooterLink>
@@ -80,13 +74,16 @@ export default function Footer() {
                 <li className="text-gray-dark">Email: info@wanee.vn</li>
               </ul>
               <div className="flex space-x-4 mt-4 justify-center md:justify-start">
-                <a href="#" className="text-gray-dark hover:text-green-logo">
+                <a
+                  href="https://www.facebook.com/WaneeVietnam"
+                  className="text-gray-dark hover:text-green-logo"
+                >
                   <Facebook className="text-black-text" />
                 </a>
-                <a href="#" className="text-gray-dark hover:text-green-logo">
+                <a href="https://www.instagram.com/wanee_vietnam/" className="text-gray-dark hover:text-green-logo">
                   <Instagram className="text-black-text" />
                 </a>
-                <a href="#" className="text-gray-dark hover:text-green-logo">
+                <a href="https://www.youtube.com/@wanee_vietnam1493" className="text-gray-dark hover:text-green-logo">
                   <Youtube className="text-black-text" />
                 </a>
               </div>

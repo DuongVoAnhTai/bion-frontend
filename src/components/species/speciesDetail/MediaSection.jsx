@@ -32,7 +32,7 @@ export default function MediaSection({ data }) {
           {/* Nút điều hướng Trái */}
           <button
             onClick={() => scroll("left")}
-            className="absolute -left-12 top-1/3 z-10 hidden xl:flex h-10 w-10 items-center justify-center text-gray-dark hover:text-green-logo transition-colors"
+            className="absolute -left-12 top-1/3 z-10 hidden xl:flex h-10 w-10 items-center justify-center text-gray-dark hover:text-green-logo transition-colors cursor-pointer"
           >
             <ChevronLeft size={40} strokeWidth={1} />
           </button>
@@ -51,7 +51,7 @@ export default function MediaSection({ data }) {
           {/* Nút điều hướng Phải */}
           <button
             onClick={() => scroll("right")}
-            className="absolute -right-12 top-1/3 z-10 hidden xl:flex h-10 w-10 items-center justify-center text-gray-dark hover:text-green-logo transition-colors"
+            className="absolute -right-12 top-1/3 z-10 hidden xl:flex h-10 w-10 items-center justify-center text-gray-dark hover:text-green-logo transition-colors cursor-pointer"
           >
             <ChevronRight size={40} strokeWidth={1} />
           </button>

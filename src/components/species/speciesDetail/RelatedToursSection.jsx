@@ -31,7 +31,7 @@ export default function RelatedToursSection({ data }) {
           {/* Nút mũi tên Trái */}
           <button
             onClick={() => scroll("left")}
-            className="absolute -left-12 top-1/2 -translate-y-1/2 z-10 hidden xl:flex text-gray-dark hover:text-green-logo transition-colors"
+            className="absolute -left-12 top-1/2 -translate-y-1/2 z-10 hidden xl:flex text-gray-dark hover:text-green-logo transition-colors cursor-pointer"
           >
             <ChevronLeft size={40} strokeWidth={1.5} />
           </button>
@@ -49,7 +49,7 @@ export default function RelatedToursSection({ data }) {
           {/* Nút mũi tên Phải */}
           <button
             onClick={() => scroll("right")}
-            className="absolute -right-12 top-1/2 -translate-y-1/2 z-10 hidden xl:flex text-gray-dark hover:text-green-logo transition-colors"
+            className="absolute -right-12 top-1/2 -translate-y-1/2 z-10 hidden xl:flex text-gray-dark hover:text-green-logo transition-colors cursor-pointer"
           >
             <ChevronRight size={40} strokeWidth={1.5} />
           </button>

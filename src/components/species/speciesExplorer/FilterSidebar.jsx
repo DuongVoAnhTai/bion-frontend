@@ -10,7 +10,7 @@ const FilterAccordion = ({ label }) => {
     <div className="border-b border-gray-light/50 py-4 last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between text-left group"
+        className="flex w-full items-center justify-between text-left group cursor-pointer"
       >
         <span
           className={cn(

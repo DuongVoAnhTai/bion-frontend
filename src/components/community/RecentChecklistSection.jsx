@@ -1,5 +1,5 @@
 import { DoubleDownIcon } from "../../assets/icon";
-import ChecklistCard from "./components/ChecklistCard";
+import ChecklistCard from "../ChecklistCard";
 
 export default function RecentChecklistSection({ data }) {
   return (
