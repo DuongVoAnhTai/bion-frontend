@@ -38,7 +38,9 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <FooterLink to="/species">Species Researchs</FooterLink>
+                  <FooterLink to="https://wanee.asia/tailored-tours-vietnam-wildlife-experiences/">
+                    Wildlife Journey
+                  </FooterLink>
                 </li>
                 <li>
                   <FooterLink to="/species">Search Species</FooterLink>
@@ -80,10 +82,16 @@ export default function Footer() {
                 >
                   <Facebook className="text-black-text" />
                 </a>
-                <a href="https://www.instagram.com/wanee_vietnam/" className="text-gray-dark hover:text-green-logo">
+                <a
+                  href="https://www.instagram.com/wanee_vietnam/"
+                  className="text-gray-dark hover:text-green-logo"
+                >
                   <Instagram className="text-black-text" />
                 </a>
-                <a href="https://www.youtube.com/@wanee_vietnam1493" className="text-gray-dark hover:text-green-logo">
+                <a
+                  href="https://www.youtube.com/@wanee_vietnam1493"
+                  className="text-gray-dark hover:text-green-logo"
+                >
                   <Youtube className="text-black-text" />
                 </a>
               </div>

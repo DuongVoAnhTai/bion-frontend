@@ -54,13 +54,6 @@ export default function InfoSection({ data }) {
               </span>
             </div>
           </div>
-
-          {/* ACTION BUTTON */}
-          <div className="mt-4 md:mt-0">
-            <Button className="rounded-full bg-green-logo hover:bg-green-logo/90 text-white px-10 py-6 text-lg font-bold transition-transform active:scale-95">
-              Follow
-            </Button>
-          </div>
         </div>
       </div>
     </section>
