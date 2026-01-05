@@ -3,25 +3,40 @@ import { createContext, useContext, useState } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  // Kiểm tra localStorage xem có "fake_token" không để xác định trạng thái
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem("isLoggedIn") === "true"
-  );
+  // 1. Khởi tạo: Kiểm tra xem trước đó đã "đăng nhập" chưa
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem("bion_fake_token") !== null;
+  });
 
-  // Hàm giả lập đăng nhập
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  const openLoginModal = () => setIsLoginModalOpen(true);
+  const closeLoginModal = () => setIsLoginModalOpen(false);
+
+  // 2. Logic Login: Lưu token giả
   const login = () => {
+    localStorage.setItem("bion_fake_token", "mock_token_12345");
     setIsAuthenticated(true);
-    localStorage.setItem("isLoggedIn", "true");
+    closeLoginModal();
   };
 
-  // Hàm giả lập đăng xuất
+  // 3. Logic Logout: Xóa token giả
   const logout = () => {
+    localStorage.removeItem("bion_fake_token");
     setIsAuthenticated(false);
-    localStorage.removeItem("isLoggedIn");
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider
+      value={{
+        isAuthenticated,
+        login,
+        logout,
+        isLoginModalOpen,
+        openLoginModal,
+        closeLoginModal,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

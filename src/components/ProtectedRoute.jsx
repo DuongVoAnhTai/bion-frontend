@@ -1,14 +1,17 @@
-import { Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 
 export default function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
-  const location = useLocation();
+  const { isAuthenticated, openLoginModal } = useAuth();
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      openLoginModal(); // Tự động bật modal khi truy cập route bị chặn
+    }
+  }, [isAuthenticated, openLoginModal]);
 
   if (!isAuthenticated) {
-    // Nếu chưa đăng nhập, chuyển hướng về /login
-    // Lưu lại vị trí đang định vào (state: { from: location }) để sau khi login xong quay lại đúng chỗ đó
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return null; // Không render nội dung được bảo vệ; modal xử lý đăng nhập
   }
 
   return children;

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import LoginPage from "./pages/LoginPage";
+import LoginModal from "./components/auth/LoginModal";
 import HomePage from "./pages/HomePage";
 import SpeciesExplorePage from "./pages/SpeciesExplorePage";
 import SpeciesDetailPage from "./pages/SpeciesDetailPage";
@@ -20,80 +20,84 @@ import ObservationPage from "./pages/ObservationPage";
 
 const App = () => {
   return (
-    <Routes>
+    <>
       {/* Login */}
-      <Route path="/login" element={<LoginPage />} />
+      <LoginModal />
 
-      {/* Main */}
-      <Route path="/" element={<MainLayout />}>
-        <Route path="/" element={<HomePage />} />
+      <Routes>
+        {/* <Route path="/login" element={<LoginPage />} /> */}
 
-        {/* Species */}
-        <Route path="/species" element={<SpeciesExplorePage />} />
-        <Route path="/species/:id" element={<SpeciesDetailPage />} />
+        {/* Main */}
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<HomePage />} />
 
-        {/* Hotspots */}
-        <Route path="/hotspots" element={<HotspotExplorePage />} />
-        <Route path="/hotspots/:id" element={<HotspotDetailPage />} />
+          {/* Species */}
+          <Route path="/species" element={<SpeciesExplorePage />} />
+          <Route path="/species/:id" element={<SpeciesDetailPage />} />
 
-        {/* Community */}
-        <Route path="/community" element={<CommunityPage />} />
+          {/* Hotspots */}
+          <Route path="/hotspots" element={<HotspotExplorePage />} />
+          <Route path="/hotspots/:id" element={<HotspotDetailPage />} />
 
-        {/* About */}
-        <Route path="/about" element={<AboutPage />} />
+          {/* Community */}
+          <Route path="/community" element={<CommunityPage />} />
 
-        {/* Contribute */}
-        <Route
-          path="/contribute"
-          element={
-            <ProtectedRoute>
-              <ContributePage />
-            </ProtectedRoute>
-          }
-        />
+          {/* About */}
+          <Route path="/about" element={<AboutPage />} />
 
-        {/* Blog */}
-        <Route path="/blog" element={<BlogPage />} />
+          {/* Contribute */}
+          <Route
+            path="/contribute"
+            element={
+              <ProtectedRoute>
+                <ContributePage />
+              </ProtectedRoute>
+            }
+          />
 
-        {/* Observation */}
-        <Route
-          path="/observation"
-          element={
-            <ProtectedRoute>
-              <ObservationPage />
-            </ProtectedRoute>
-          }
-        />
+          {/* Blog */}
+          <Route path="/blog" element={<BlogPage />} />
 
-        {/* Checklist */}
-        <Route
-          path="/checklist/:id"
-          element={
-            <ProtectedRoute>
-              <ChecklistPage />
-            </ProtectedRoute>
-          }
-        />
+          {/* Observation */}
+          <Route
+            path="/observation"
+            element={
+              <ProtectedRoute>
+                <ObservationPage />
+              </ProtectedRoute>
+            }
+          />
 
-        {/* Profile */}
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute>
-              <ProfilePage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/photographers/:id"
-          element={
-            <ProtectedRoute>
-              <PhotographerProfilePage />
-            </ProtectedRoute>
-          }
-        />
-      </Route>
-    </Routes>
+          {/* Checklist */}
+          <Route
+            path="/checklist/:id"
+            element={
+              <ProtectedRoute>
+                <ChecklistPage />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Profile */}
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/photographers/:id"
+            element={
+              <ProtectedRoute>
+                <PhotographerProfilePage />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+      </Routes>
+    </>
   );
 };
 
